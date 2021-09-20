@@ -61,7 +61,7 @@ class _ageState extends State<age> {
                     title: Text(
                       " ${bmi.height} CM",
                       style: TextStyle(
-                fontSize: 25
+                fontSize: 20
               ),
                       textAlign: TextAlign.center
                     ),
@@ -71,63 +71,64 @@ class _ageState extends State<age> {
             ),
           ),
         ),
-        Expanded(
+         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(top:8.0),
             child: Card(
-                color: Color(0xff0D3B66),
-                elevation: 5.0,
-                shadowColor: Colors.black54,
-                child: Column(
-                  children: [
-                    SizedBox(height: 10,),
-                    Text('WEIGHT',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+              color: Color(0xff0D3B66),
+              elevation: 5.0,
+              shadowColor: Colors.black54,
+              child: Column(
+                children: [
+                  SizedBox(height: 10,),
+                  Text('WEIGHT',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
                       color: Color(0xff70A288),
                       fontSize: 35.0,
                       fontWeight: FontWeight.bold
                     ),
+                  ),
+                  SizedBox(height: 20,),
+                  ListTile(
+                    leading: InkWell(
+                      onTap: (){
+                        setState(() {
+                          bmi.weight = bmi.weight-1;
+                        });
+                      },
+                      child: Icon(
+                        
+                        Icons.remove,
+                        size:45.0,
+                        color: Colors.deepOrange,
+                        ),
                     ),
-                      ListTile(
-                        leading: InkWell(
-                          onTap: (){
-                            setState(() {
-                              bmi.weight = bmi.weight-1;
-                    }
-                    );
-              },
-              child: Icon(
-                    Icons.remove,
-                     size:45.0,
-                    color: Colors.deepOrange,
+                    trailing: InkWell(
+                      onTap: (){
+                        setState(() {
+                          bmi.weight = bmi.weight+1;
+                        });
+                      },
+                      child: Icon(
+                        Icons.add,
+                         size:45.0,
+                        color: Colors.deepOrange,
+                        ),
                     ),
-            ),
-            trailing: InkWell(
-              onTap: (){
-                    setState(() {
-                      bmi.weight = bmi.weight-1;
-                    });
-              },
-              child: Icon(
-                    Icons.add,
-                     size:45.0,
-                    color: Colors.deepOrange,
-                    ),
-            ),
-            title: Text(
-              " ${bmi.weight} KG",
-              style: TextStyle(
-                fontSize: 30
+                    title: Text(
+                      " ${bmi.weight.toInt()} KG",
+                      style: TextStyle(
+                fontSize: 20
               ),
-              textAlign: TextAlign.center,
-            ),
+                      textAlign: TextAlign.center
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+            ),
           ),
-        )
+        ),
       ],
     );
     

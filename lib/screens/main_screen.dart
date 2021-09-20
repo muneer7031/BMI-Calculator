@@ -1,7 +1,9 @@
-import 'package:bmi_calc/widgets/class.dart';
+import 'package:bmi_calc/widgets/gender.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calc/widgets/MySlider.dart';
 import 'package:bmi_calc/widgets/agebar.dart';
+import 'package:bmi_calc/screens/menu.dart';
+// import 'images';
 class Home extends StatelessWidget {
    Home({ Key? key }) : super(key: key);
 
@@ -9,30 +11,50 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       
       home: SafeArea(
-        child: Column(
-          children:[ 
-            SizedBox(height: 100,),
-            Container(
-              child: MySlider()
-              ),
-            SizedBox(height: 100,),
-            Container(
-              child: age()
-              ),
-            SizedBox(height: 100,),
-
-            ElevatedButton(
-              style: raisedButtonStyle,
-              onPressed: () { 
-                  Navigator.pushNamed(context, '/bmi');
-              },
-                child: Text('CALCULATE BMI'),
-            )
-              ],
+        child: Scaffold(
+          drawer: menu(),
+          backgroundColor:Colors.black45, 
+          appBar: AppBar(
+            backgroundColor: Colors.black45,
+            
+            leading:  Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: const Icon(Icons.menu),
+                          onPressed: () { Scaffold.of(context).openDrawer(); },
+                          tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                        );
+                      },
+                    ),
           ),
+          body: Column(
+            children:[ 
+              // SizedBox(height: 100,),
+              gender(),
+              SizedBox(height: 50,),
+              Container(
+                child: MySlider()
+                ),
+              SizedBox(height: 50,),
+              Container(
+                child: age()
+                ),
+              SizedBox(height: 100,),
+
+              ElevatedButton(
+                style: raisedButtonStyle,
+                onPressed: () { 
+                    Navigator.pushNamed(context, '/bmi');
+                },
+                  child: Text('CALCULATE BMI'),
+              )
+                ],
+            ),
+        ),
       ),
     );
   }
