@@ -2,8 +2,7 @@ import 'package:bmi_calc/widgets/gender.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calc/widgets/MySlider.dart';
 import 'package:bmi_calc/widgets/agebar.dart';
-// import 'package:bmi_calc/screens/menu.dart';q
-// import 'images';
+
 class Home extends StatelessWidget {
    Home({ Key? key }) : super(key: key);
 
@@ -29,7 +28,9 @@ class Home extends StatelessWidget {
                 color: Color(0xff031926),
                 image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('images/img.png'))),
+                    image: AssetImage('images/img.png'),
+                    ),
+                    ),
           ),
           ListTile(
             leading: Icon(Icons.input),
@@ -87,7 +88,6 @@ class Home extends StatelessWidget {
           ),
           body: Column(
             children:[ 
-              // SizedBox(height: 100,),
               gender(),
               SizedBox(height: 50,),
               Container(
