@@ -53,7 +53,7 @@ class Home extends StatelessWidget {
             title: Text('Settings',
             style: TextStyle(color: Color(0xff031926),
              ),),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () {Navigator.pushNamed(context, '/men');},
           ),
           ListTile(
             leading: Icon(Icons.border_color),
@@ -69,7 +69,7 @@ class Home extends StatelessWidget {
              ),),
             onTap: (){
                Future.delayed(const Duration(milliseconds: 1000), () {
-            exit(0);
+          exit(0);
       });
             },
           ),
