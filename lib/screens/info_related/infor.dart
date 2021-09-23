@@ -72,7 +72,6 @@ class info extends StatelessWidget {
                       style: GoogleFonts.shadowsIntoLight(
                         textStyle: TextStyle(
                           fontSize: 20,
-                          // fontWeight: FontWeight.bold
                         )
                       )
                     ),

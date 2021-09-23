@@ -2,7 +2,7 @@ import 'package:bmi_calc/widgets/gender.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calc/widgets/MySlider.dart';
 import 'package:bmi_calc/widgets/agebar.dart';
-
+import 'dart:io';
 class Home extends StatelessWidget {
    Home({ Key? key }) : super(key: key);
 
@@ -67,7 +67,11 @@ class Home extends StatelessWidget {
             title: Text('Logout',
             style: TextStyle(color: Color(0xff031926),
              ),),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: (){
+               Future.delayed(const Duration(milliseconds: 1000), () {
+            exit(0);
+      });
+            },
           ),
         ],
       ),
