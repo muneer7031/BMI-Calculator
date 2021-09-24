@@ -33,13 +33,13 @@ class Home extends StatelessWidget {
                     ),
           ),
           ListTile(
-            leading: Icon(Icons.input),
+            leading: Icon(Icons.search),
             title: Text('Check my BMI',
             style: TextStyle(color: Color(0xff031926),
              ),
             
             ),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: ()   {Navigator.pushNamed(context, '/');},
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
@@ -49,18 +49,18 @@ class Home extends StatelessWidget {
             onTap: ()  {Navigator.pushNamed(context, '/info');},
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings',
+            leading: Icon(Icons.info_rounded),
+            title: Text('Ideal BMI for Men',
             style: TextStyle(color: Color(0xff031926),
              ),),
             onTap: () {Navigator.pushNamed(context, '/men');},
           ),
           ListTile(
-            leading: Icon(Icons.border_color),
-            title: Text('Feedback',
+            leading: Icon(Icons.info_outline),
+            title: Text('Ideal BMI for Women',
             style: TextStyle(color: Color(0xff031926),
              ),),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: ()  {Navigator.pushNamed(context, '/wom');},
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
