@@ -10,7 +10,7 @@ class wom extends StatelessWidget {
         child: Scaffold(
           backgroundColor:  Color(0xff031926),
           appBar: AppBar(
-            title: Text("Ideal BMI for Men?",
+            title: Text("Ideal BMI for Women?",
                         style: GoogleFonts.architectsDaughter(
                                     textStyle: TextStyle(
                                       fontSize: 25,
@@ -29,16 +29,6 @@ class wom extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                           text: 'What is BMI \n',
-                          spellOut: true,
-                          style: GoogleFonts.architectsDaughter(
-                            textStyle: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold
-                            )
-                          )
-                        ),
-                        TextSpan(
-                          text: 'BMI ',
                           spellOut: true,
                           style: GoogleFonts.architectsDaughter(
                             textStyle: TextStyle(
@@ -68,7 +58,7 @@ class wom extends StatelessWidget {
                         shape: BoxShape.rectangle,
                         image:  DecorationImage(
                           fit: BoxFit.fill,
-                          image:  AssetImage('images/ideal_men.jpeg')
+                          image:  AssetImage('images/ideal_wom.jpeg')
                           )
                       )),
 
