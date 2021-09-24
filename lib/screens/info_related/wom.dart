@@ -10,6 +10,7 @@ class wom extends StatelessWidget {
         child: Scaffold(
           backgroundColor:  Color(0xff031926),
           appBar: AppBar(
+             backgroundColor:  Color(0xff031926),
             title: Text("Ideal BMI for Women?",
                         style: GoogleFonts.architectsDaughter(
                                     textStyle: TextStyle(
@@ -61,6 +62,7 @@ class wom extends StatelessWidget {
                           image:  AssetImage('images/ideal_wom.jpeg')
                           )
                       )),
+                  SizedBox(height: 150,)
 
                 ],
               ),

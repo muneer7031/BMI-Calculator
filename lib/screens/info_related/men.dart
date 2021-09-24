@@ -10,6 +10,7 @@ class men extends StatelessWidget {
         child: Scaffold(
           backgroundColor:  Color(0xff031926),
           appBar: AppBar(
+            backgroundColor:  Color(0xff031926),
             title: Text("Ideal BMI for Men?",
                         style: GoogleFonts.architectsDaughter(
                                     textStyle: TextStyle(
@@ -61,7 +62,7 @@ class men extends StatelessWidget {
                           image:  AssetImage('images/ideal_men.jpeg')
                           )
                       )),
-
+                  SizedBox(height: 150,)
                 ],
               ),
             ),
