@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return MaterialApp(
+      title: 'BMI Calculator',
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       

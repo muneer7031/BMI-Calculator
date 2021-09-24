@@ -7,6 +7,7 @@ import 'package:bmi_calc/screens/info_related/wom.dart';
 void main(){
   runApp(
     MaterialApp(
+      title: 'BMI Calculator',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
